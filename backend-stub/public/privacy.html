@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+  DRAFT privacy policy written from what SoftAlarm really does (see the code). I am not a lawyer:
+  have it reviewed for the countries where you publish. Fill CONTACT_EMAIL and PUBLISHER_NAME on the server.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SoftAlarm Privacy Policy</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 24px 18px 60px; line-height: 1.6; color: #3D2C3A; background: #FFF8F2; }
+  h1 { font-size: 28px; } h2 { font-size: 20px; margin-top: 32px; }
+  li { margin: 4px 0; } .box { background: #fff; border-radius: 14px; padding: 14px 18px; }
+  a { color: #E8644A; } small { color: #7A5C6E; }
+</style>
+</head>
+<body>
+<h1>SoftAlarm Privacy Policy</h1>
+<p><small>Last updated: {{UPDATED}}</small></p>
+
+<h2>1. Who we are</h2>
+<p>SoftAlarm is an alarm clock app published by <b>{{PUBLISHER}}</b> ("we"). You can reach us at
+<a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>.</p>
+
+<h2>2. The short version</h2>
+<div class="box">
+<ul>
+  <li>Your alarms, timer, settings and the audio files you choose <b>stay on your phone</b>.</li>
+  <li>There are <b>no ads</b>, no advertising ID, no analytics or tracking tools, and we <b>never sell</b> your data.</li>
+  <li>We use online services only for two things: a silent account (so Pro can follow you to a new phone) and the optional one-time Pro payment.</li>
+  <li>You can delete your account and its data inside the app: <b>Account &rarr; Delete my account</b>.</li>
+</ul>
+</div>
+
+<h2>3. What stays on your phone</h2>
+<ul>
+  <li>Your alarms (time, label, repeat days, chosen voice), the timer, and app settings.</li>
+  <li>A saved copy of whether Pro is unlocked.</li>
+  <li>If you pick "My own file", the app remembers where that file is so the alarm can play it. We do not upload, copy or read your files for any other purpose.</li>
+</ul>
+
+<h2>4. What we collect online, and why</h2>
+<ul>
+  <li><b>Account ID.</b> When you open the app it creates a random "guest" account with Google Firebase Authentication. We need it to know which account owns a Pro purchase.</li>
+  <li><b>Email address (only if you sign in).</b> If you choose to sign in with Google or email, Firebase stores that email address (and, for Google, the name and photo that your Google account shares). This is optional.</li>
+  <li><b>User record</b> (Google Firestore): your account ID, the date it was created, the app version, the last time you opened the app, and whether Pro is unlocked (including a mark if a payment was refunded).</li>
+  <li><b>Payment records</b> (Pro only): Polar order ID, amount, currency, date and status. We never receive your card number.</li>
+  <li><b>Technical data.</b> When your phone connects to our server, Firebase or Polar, those services see technical information such as your IP address. We do not use it to track you.</li>
+</ul>
+<p>We do not collect your location, contacts, photos, microphone, advertising ID or browsing history.</p>
+
+<h2>5. Payments</h2>
+<p>The Pro unlock is sold through <b>Polar</b> (polar.sh), which acts as the merchant of record. Polar shows the payment page, collects your payment details, name, email and billing country, handles taxes and sends your receipt. Polar's own privacy policy applies to that data. We only receive the order result described above.</p>
+
+<h2>6. Service providers</h2>
+<ul>
+  <li>Google Firebase (Authentication and Firestore) stores account and Pro data.</li>
+  <li>Polar processes payments.</li>
+  <li>Our server host runs the small payment service that talks to Polar and Firebase.</li>
+</ul>
+<p>These providers may process data in countries other than yours.</p>
+
+<h2>7. Why the app asks for certain permissions</h2>
+<ul>
+  <li><b>Notifications, full-screen alerts, alarms &amp; reminders, display over other apps:</b> so an alarm can ring at the exact time and show on the lock screen.</li>
+  <li><b>Battery optimisation exemption, wake lock, run at start-up:</b> so alarms still ring when the screen is off, and are set again after a restart.</li>
+  <li><b>Vibrate:</b> gentle vibration while an alarm rings.</li>
+  <li><b>Internet:</b> only for the account and payment features above.</li>
+</ul>
+
+<h2>8. How long we keep data</h2>
+<p>Account and Pro data is kept until you delete your account. Payment records are kept in anonymised form (not linked to you) for as long as accounting, tax and legal rules require.</p>
+
+<h2>9. Your choices and rights</h2>
+<ul>
+  <li><b>Delete your account:</b> in the app, <i>Account &rarr; Delete my account</i>. Details: <a href="/delete-account">delete-account</a>.</li>
+  <li>You can also email <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a> to ask for access, correction, a copy, or deletion of your data. Depending on where you live, you may have more rights, and we will respect them.</li>
+  <li>Deleting the app removes the data on your phone. It does not delete your online account; use the steps above for that.</li>
+</ul>
+
+<h2>10. Children</h2>
+<p>SoftAlarm is not directed at children under 13 and we do not knowingly collect their personal data.</p>
+
+<h2>11. Security</h2>
+<p>Data is sent over encrypted connections (HTTPS). No system is perfectly secure, but we only keep the small amount of data described here.</p>
+
+<h2>12. Changes</h2>
+<p>If we change this policy we will update the date above and, for important changes, tell you in the app.</p>
+
+<h2>13. Contact</h2>
+<p>{{PUBLISHER}} &ndash; <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a></p>
+</body>
+</html>

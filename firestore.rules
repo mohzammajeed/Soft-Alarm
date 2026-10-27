@@ -1,0 +1,31 @@
+rules_version = '2';
+
+// SoftAlarm Firestore rules.
+// The app may only create/read its OWN user record and touch appVersion / lastSeen.
+// Nobody can give themselves Pro: the "pro" field and all "payments" are written
+// only by the payment server (Firebase Admin SDK), which ignores these rules.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /users/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+
+      allow create: if request.auth != null && request.auth.uid == uid
+                    && request.resource.data.keys().hasOnly(['createdAt', 'appVersion', 'lastSeen']);
+
+      allow update: if request.auth != null && request.auth.uid == uid
+                    && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['appVersion', 'lastSeen']);
+
+      allow delete: if false;
+    }
+
+    match /payments/{paymentId} {
+      allow read: if request.auth != null && resource.data.uid == request.auth.uid;
+      allow write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

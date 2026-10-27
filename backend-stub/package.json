@@ -1,0 +1,17 @@
+{
+  "name": "softalarm-payment-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Creates the $1 Polar checkout for SoftAlarm Pro and unlocks Pro in Firestore after Polar confirms the order.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#FF7A5C</item>
+        <item name="colorPrimaryVariant">#E8644A</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#9C7A9E</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="android:colorAccent">#FF7A5C</item>
+        <item name="android:colorControlActivated">#FF7A5C</item>
+        <item name="android:windowBackground">#FFF8F2</item>
+    </style>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 12 and newer: cloud backup and phone-to-phone transfer.
+     Alarms are kept. The cached Pro flag is NOT copied: Pro follows the signed-in account instead. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="softalarm_pro.xml" />
+        <exclude domain="sharedpref" path="softalarm_perm.xml" />
+        <exclude domain="sharedpref" path="softalarm_timer.xml" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="softalarm_pro.xml" />
+        <exclude domain="sharedpref" path="softalarm_perm.xml" />
+        <exclude domain="sharedpref" path="softalarm_timer.xml" />
+    </device-transfer>
+</data-extraction-rules>

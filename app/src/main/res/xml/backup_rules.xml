@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 11 and older: what Auto Backup may copy -->
+<full-backup-content>
+    <exclude domain="sharedpref" path="softalarm_pro.xml" />
+    <exclude domain="sharedpref" path="softalarm_perm.xml" />
+    <exclude domain="sharedpref" path="softalarm_timer.xml" />
+</full-backup-content>
